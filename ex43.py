@@ -60,7 +60,7 @@ class Clown(Scene):
 
         talk = "reden ansprechen frage fragen unterhalten unterhalte sprech spreche rede"
         touch = "schubse schubsen rempeln schiebe schieben stoße stoßen stossen stosse fasse fassen"
-        joke = "witz joke witzig lachen lache kitzeln kitzele"
+        joke = "witz  Witz Witzig Lachen Lache Kitzeln joke witzig lachen lache kitzeln kitzele"
 
         matchtalk = list(set(action.split()) & set(talk.split()))
         matchtouch = list(set(action.split()) & set(touch.split()))
@@ -78,6 +78,7 @@ class Clown(Scene):
         elif matchjoke:
             print "\n---------------------------------------------------------"
             print "Du erzählst deinen besten Witz in Clownsprache! HAHA!"
+            print "Dabei kitzelst du den dicken Clownbauch."
             print "Der übellaunige Clown versucht mit höchster Diziplin, nicht zu lachen."
             print "Es gelingt ihm nicht. Er lacht sich tot. Der Weg ist frei..."
             print "\n"
@@ -149,19 +150,21 @@ class Gregor(Scene):
 
         elif int(guess) != thegreg:
             print "\n---------------------------------------------------------"
-            print "Unter dieser Nuss liegt eine grüne Murmel."
-            print "Eine Murmel? Wo kommt die denn jetzt her?"
+            print "Unter Nuss Nr. %d liegt eine grüne Murmel." % int(guess)
+            print "Eine Murmel? Wo kommt die denn jetzt auf einmal her?"
             print "Auch die Schabe scheint verwirrt. Egal."
-            print "Du nimmst die Murmel und gehst."
+            print "Wortlos nimmst du die Murmel und gehst."
             print "\n"
             return 'cat'
 
 
         else:
             print "\n---------------------------------------------------------"
-            print "Treffer. Der kleine Beamte stellt sich als Gregor Samsa vor."
-            print "Du schüttelst seine winzige Hand. Er beisst in deinen Finger."
-            print "Die Schabe und Gregor Samsa feiern. Du verblutest."
+            print "Treffer bei Nuss Nr. %d" % int(guess)
+            print "Der kleine Beamte stellt sich dir als Gregor Samsa vor."
+            print "Erfreut schüttelst du seine winzige Hand."
+            print "Gregor Samsa beisst in deinen Zeigefinger."
+            print "Die Schabe und Gregor Samsa johlen und feiern. Du verblutest."
             print "\n"
             return 'death'
 
@@ -170,21 +173,22 @@ class Cat(Scene):
     def enter(self):
         print "Du kommst an eine weitere Lichtung."
         print "Auf einem Stein sitzt eine einäugige Katze."
-        print "Das noch vorhandene Auge ist murmelfarben..."
+        print "Ihr noch vorhandenes Auge sieht genauso aus"
+        print "wie die Murmel, die du beim Zocken gewonnen hast..."
         print "\n"
 
         action = raw_input("> ")
-        thegreg = "murmel"
-        touch = "streicheln füttere füttern kraulen futter fell streichele kraule"
+        thegreg = "murmel Murmel"
+        touch = "streicheln füttere füttern kraulen Futter Fell Kraulen Streicheln Füttern futter fell streichele kraule"
 
         matchgreg = list(set(action.split()) & set(thegreg.split()))
         matchtouch = list(set(action.split()) & set(touch.split()))
 
         if matchgreg:
             print "\n---------------------------------------------------------"
-            print "Wirklich? Du denkst, diese Murmel ist das fehlende Katzenauge?"
-            print "Der Kater ist bitter enttäuscht, dass du so billig auf seine Behinderung anspielst..."
-            print "Er guckt dich so lange vorwurfsvoll an bis du stirbst."
+            print "Ernsthaft? Du denkst, diese Murmel ist das fehlende Katzenauge?"
+            print "Der Kater ist bitter enttäuscht, dass du so dreist auf seine Behinderung anspielst..."
+            print "Er guckt dich einäugig so lange vorwurfsvoll an bis du stirbst."
             print "\n"
             return 'death'
         elif matchtouch:
