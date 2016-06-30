@@ -104,7 +104,7 @@ class Bear(Scene):
 
         while guess != code and guesses < 4:
             print "Nope!"
-            print "Noch %d Versuche." % tries
+            print "Noch %d Versuch(e)." % tries
             print "\n"
             guesses += 1
             tries -= 1
