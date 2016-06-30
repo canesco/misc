@@ -95,7 +95,7 @@ class Bear(Scene):
         print "Der Weg über die Brücke ist allerdings versperrt. Von einem weinenden Bären."
         print "Sein Einrad wurde von einem sadistischen Biber an den Brückenpfeiler geschlossen."
         print "Es handelt sich um ein dreistelliges Zahlenschloss."
-        print "Mit den Zahlen 1 bis 2. TIERE!"
+        print "Mit den Ziffern 1 bis 2. TIERE!"
         print "\n"
 
         code = "%d%d%d" % (randint(1,2), randint(1,2), randint(1,2))
