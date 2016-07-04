@@ -1,0 +1,13 @@
+================================================================================
+OPEN bin/app.py on localhost:8080 - WHAT HAPPENS?
+================================================================================
+
+1. Browser makes network connection to machine which is called <localhost> on port 8080
+
+2. Browser makes HTTP request to the bin/app.py application and asks for / URL
+
+3. Inside bin/app.py is a list of URLs and their matching classes ('/', 'index'). Whenever someone goes to / with a browser, web framework will find class index to handle the request
+
+4. Web framework calls index.GET method. Function runs and returns something
+
+5. Web framework has handled request and sends this response to the browser --> this is what's seen!
